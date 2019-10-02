@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/boot
+    strap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="gamePage.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--cdn for the search icon-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+    <script src="gamePage.js" type="text/javascript"></script>
+    <title>gamePage</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            alert("The page has loaded.")
+        });
+        $(document).ready(function(){
+            $(".btn-purchase").click(function(){
+                alert("Item Added to cart \nYour total is now: R" + total_amount)
+            })
+        });
+
+
+    </script>
+
+</head>
+<div class="search-box">
+    <input class="search-txt" type="text" placeholder="Search">
+    <!--placeholder is the text that appears in the search bar-->
+    <a class="search-btn" href="#">
+        <i class="fa fa-search" style="font-size:20px"></i>
+        <!--inputs the search icon-->
+    </a>
+</div>
+<h1 class="title">
+    <!--splitting the word up into two classes so that i can decorate them individually-->
+    <span class="WhiteFont">Game</span>
+    <!--created a sepearte class so that i can decorate this text alone-->
+    <span class="OrangeFont">hub</span>
+    <!--created a sepearte class so that i can decorate this text alone-->
+</h1>
+<nav>
+    <ul class="listLinks">
+        <li><a href="homePage.html">Home</a></li>
+        <li><a href="gamePage.html">Gaming</a></li>
+        <li><a href="aboutPage.html">About</a></li>
+    </ul>
+
+</nav>
+
+<body>
+    <br>
+
+<br>
+</div>
+    <br>
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal11">
+                    <span class="name">Cart</span>
+                    <span class="icon"><i class="fa fa-shopping-cart" style="font-size:36px"></i></span>
+                </button>
+                <div class=" modal fade" id="myModal11" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" onclick="save()" onclick="save()">&times;</button>
+                                <h4 class="modal-title">Shopping Cart</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="list">
+                                    <ol id="cart-list">
+                                        
+                                    </ol>
+                                    <p id="total"></p>                        
+                                </div>                    
+                            </div>
+                            <div class="modal-footer">
+                                <button id="show-cart" class="btn btn-refresh" onclick="calculate()"><i style="font-size:24px" class="fa">&#xf021;</i></button>
+                                <button type="button" class="btn btn-default" onclick="confirm()">Confirm</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Return</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                    <img src="Watch Dogs 2.jpg">
+                </button>
+                <div class=" modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Watch Dogs 2</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="Watch Dogs 2.jpg">
+                                <hr>
+                                <p ><u><b id = "item1">R700</b></u></p>
+                                <p>Watch Dogs 2 an action-adventure video game published by Ubisoft Montreal. Set within a fictionalized version of the San Francisco Bay Area, the game is played from a third person perspective. and it's open world is navigated on foot or by vehicle. Players control protagonist Marcus Halloway, a hacker who works withe the hacking group DedSec to take down the city's advanced surveillance system known as ctOS.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="purchase_1" class="btn btn-purchase" onclick="add_game1()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2"><img src="GTA V.jpeg"></button>
+                <div class=" modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Grand Theft Auto V</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="GTA V.jpeg">
+                                <hr>
+                                <p ><u><b id = "item2">R300</b></u></p>
+                                <p>Grand Theft Auto is a video game developed by Rockstar North. Set within the fictional state of San Andreas, based on Southern California, the single player story follows three criminals and their efforts to commit heists while under pressure from a government agency. The open world design let's players freely roam San Andreas' open countryside and the fictional city of Los Santos, based on Las Angeles.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="purchase_2" class="btn btn-purchase" onclick="add_game2()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">
+                    <img src="NFS.jpg">
+                </button>
+                <div class=" modal fade" id="myModal3" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">NFS: Payback</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="NFS.jpg">
+                                <hr>
+                                <p ><u><b id = "item3">R500</b></u></p>
+                                <p>Need for Speed Payback is a racing game set in an open world environment of Fortune Valley (a fictional version of Las Vegas, Nevada). It is focused on "action driving" and has three playable characters working together to pull off action movie like sequences. In contrast with the previous game, it also features a 24-hour day-night cycle.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="purchase_3" class="btn btn-purchase" onclick="add_game3()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4"><img src="MaxPayne.jpg"></button>
+                <div class=" modal fade" id="myModal4" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Max Payne 3</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="MaxPayne.jpg">
+                                <hr>
+                                <p ><u><b id = "item4">R250</b></u></p>
+                                <p>Max Payne 3 is a third-person shooter in which the player assumes the role of its titular character, Max Payne. In order to progress through the linear story, players take on enemies throughout levels. The game features interactive cutscenes which transition seamlessly into continuing gameplay; there are no loading screens across gameplay and cutscenes.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="purchase_4" class="btn btn-purchase" onclick="add_game4()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal5">
+                    <img src="WW2.jpg">
+                </button>
+                <div class=" modal fade" id="myModal5" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Call of Duty: WW2</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="WW2.jpg">
+                                <hr>
+                                <p ><u><b id = "item5">R750</b></u></p>
+                                <p>Call of Duty: WWII is a first-person shooter video game. The game's campaign is set in the European theatre and is centered around a squad in the 1st Infantry Division following their battles on the Western Front and set mainly in the historical events of Operation Overlord. The player controls Ronald Daniels, who has squadmates who can supply the player with extra ammunition, health, or grenades as well as a targeted grenade and target spotting; none of these are automatically replenished in the campaign.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="purchase_5" class="btn btn-purchase" onclick="add_game5()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal6"><img src="RE7.jpg"></button>
+                <div class=" modal fade" id="myModal6" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Resident Evil 7</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="RE7.jpg">
+                                <hr>
+                                <p ><u><b id = "item6">R650</b></u></p>
+                                <p>The player controls Ethan Winters from a first-person perspective as he searches the Baker house for his missing wife. Although Ethan is a civilian with few combat skills, he is able to arm himself with a variety of weapons including handguns, shotguns, flamethrowers, explosives and chainsaws. He can also block attacks to reduce damage. Various sections of the game are spent being pursued by members of the Baker family, who if engaged in combat, can only be temporarily incapacitated.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="purchase_6" class="btn btn-purchase" onclick="add_game6()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal7">
+                    <img src="Fallout.jpg">
+                </button>
+                <div class=" modal fade" id="myModal7" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Fallout 4</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="Fallout.jpg">
+                                <hr>
+                                <p ><u><b id = "item7">R400</b></u></p>
+                                <p>Fallout 4 is a post-nuclear apocalyptic action role-playing game developed by Bethesda Game Studios. The player assumes control of a character referred to as the "Sole Survivor", who emerges from a long-term cryogenic stasis in Vault 111, an underground nuclear fallout shelter. Fallout 4 also marks the first game in the series to feature full voice acting for the protagonist.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="purchase_7" class="btn btn-purchase" onclick="add_game7()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal8"><img src="WWE.jpg"></button>
+                <div class=" modal fade" id="myModal8" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">WWE 2K19</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="WWE.jpg">
+                                <hr>
+                                <p ><u><b id = "item8">R800</b></u></p>
+                                <p>WWE 2K19 features many different returning and new game modes, including the 2K Showcase Mode, focusing on the career of Daniel Bryan. This is the first Showcase to be featured in the series since WWE 2K17's Hall of Fame Showcase DLC. Players take control of 11 different unique models of Daniel Bryan, in 11 matches, including his Velocity match against John Cena.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="purchase_8" class="btn btn-purchase" onclick="add_game8()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal9">
+                    <img src="AWayOut.jpg">
+                </button>
+                <div class=" modal fade" id="myModal9" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">A Way Out</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="AWayOut.jpg">
+                                <hr>
+                                <p ><u><b id = "item9">R500</b></u></p>
+                                <p>A Way Out is an action-adventure game developed by Hazelight Studios and published by Electronic Arts under their EA Originals program. It is the second video game to be directed by Josef Fares after Brothers: A Tale of Two Sons.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-purchase" onclick="add_game9()">Add To Cart</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                  id="purchase_9"       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal10"><img src="SpiderMan.jpg"></button>
+                <div class=" modal fade" id="myModal10" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">SpiderMan</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="SpiderMan.jpg">
+                                <hr>
+                                <p "><u><b id = "item10">R600</b></u></p>
+                                <p>Marvel's Spider-Man is a 2018 action-adventure game developed by Insomniac Games and published by Sony Interactive Entertainment. Based on the Marvel Comics superhero Spider-Man, inspired by the comic book.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="modal-footer"><button type="button" class="btn btn-purchase" onclick="add_game10()">Add To Cart</button>
+                                    <button type="button" id="purchase_10 " class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+    <div class="table-body">
+        <table class="w3-bordered w3-hoverable">
+            <tr class="table-head">
+                <td><b>Game</b></td>
+                <td><b>Publisher</b></td>
+                <td b>Price</b></td>
+            </tr>
+            <tr>
+                <td>Watch Dogs</td>
+                <td>Ubisoft</td>
+                <td>R850</td>
+            </tr>
+            <tr>
+                <td>Grand Theft Auto V</td>
+                <td>Rockstar Games</td>
+                <td>R600</td>
+            </tr>
+            <tr>
+                <td>NFS: Payback</td>
+                <td>EA Games</td>
+                <td>R700</td>
+            </tr>
+            <tr>
+                <td>Max Payne</td>
+                <td>Rockstar Games</td>
+                <td>R550</td>
+            </tr>
+            <tr>
+                <td>Call of Duty: WW2</td>
+                <td>Activision</td>
+                <td class="sold-out">Sold Out</td>
+            </tr>
+            <tr>
+                <td>Resident Evil 7</td>
+                <td>Capcom</td>
+                <td>R800</td>
+            </tr>
+            <tr>
+                <td>Fallout 4</td>
+                <td>Bethesda</td>
+                <td>R500</td>
+            </tr>
+            <tr>
+                <td>WWE 2K19</td>
+                <td>2k Games </td>
+                <td>R1200</td>
+            </tr>
+            <tr>
+                <td>A Way Out</td>
+                <td>EA Games</td>
+                <td>R750</td>
+            </tr>
+            <tr>
+                <td>Spider-Man</td>
+                <td>Sony Interactive Entertainment</td>
+                <td>R800</td>
+            </tr>
+        </table>
+    </div>
+    <div class="form">
+        <div class="form-body">
+            <h1 class="head-form"><b>Sign Up</b></h1>
+            <p class="para-form">Its free and only takes a minute</p>
+            <div class=form>
+                <input type="text" name="FirstName" placeholder="Username">
+                <br>
+                <br>
+                <input type="email" name="EmailAddress" placeholder="Email Address">
+                <br>
+                <br>
+                <input type="password" name="Password" placeholder="Password">
+                <br>
+                <br>
+                <input class="submit" type="submit" value="submit">
+            </div>
+        </div>
+    </div>
+    <div class="Footer">
+        <p>2019 Xavier Corporation (Pty)</p>
+        <p class="foot">All Rights Reserved &copy;</p>
+    </div>
+</body>
+
+</html>
